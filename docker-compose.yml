@@ -1,0 +1,23 @@
+version: '3.5'
+
+services:
+  sample_api:
+    image: sample_api
+    build:
+      context: .
+      target: development
+      dockerfile: ./Dockerfile
+    volumes:
+      - ./:/opt/architecture:z
+    env_file:
+      - .env
+    ports:
+      - "3020:80"
+      - "9320:9320"
+    networks:
+      shopper_devnet:
+        ipv4_address: 10.10.3.20
+
+networks:
+  shopper_devnet:
+    external: true
