@@ -1,0 +1,8 @@
+get:
+  summary: Lista os livros com paginação
+  operationId: HomePageUseCase
+  tags:
+    - HomePage
+  responses:
+    '200':
+      $ref: "../responses/_index.yml#/BookPageResponse"

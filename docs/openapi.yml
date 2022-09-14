@@ -1,0 +1,17 @@
+openapi: 3.0.0
+info:
+  title: Architecture
+  description: API de estudos de arquitetura
+  version: 1.0.0
+
+paths:
+  /:
+    $ref: ./paths/home-page.yml
+
+components:
+  parameters:
+    $ref: ./parameters/_index.yml
+  schemas:
+    $ref: ./schemas/_index.yml
+  responses:
+    $ref: ./responses/_index.yml
