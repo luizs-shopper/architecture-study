@@ -18,6 +18,14 @@ services:
     networks:
       shopper_devnet:
         ipv4_address: 10.10.3.20
+  sidecar:
+    image: sample_api
+    command: yarn install
+    volumes:
+      - ./:/opt/architecture:z
+      - node_modules:/opt/architecture/node_modules
+    env_file:
+      - .env
 
 volumes:
   node_modules:
