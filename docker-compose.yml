@@ -9,6 +9,7 @@ services:
       dockerfile: ./Dockerfile
     volumes:
       - ./:/opt/architecture:z
+      - node_modules:/opt/architecture/node_modules
     env_file:
       - .env
     ports:
@@ -17,6 +18,9 @@ services:
     networks:
       shopper_devnet:
         ipv4_address: 10.10.3.20
+
+volumes:
+  node_modules:
 
 networks:
   shopper_devnet:

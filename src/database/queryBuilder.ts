@@ -4,8 +4,8 @@ import { study } from './knexfile'
 
 declare module 'knex/types/result' {
     interface Registry {
-        Count: number;
+        Count: number
     }
 }
 
-export const StudyQueryBuilder:Knex = knex(study)
+export const StudyQueryBuilder: Knex = knex(study)

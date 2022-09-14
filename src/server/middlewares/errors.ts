@@ -1,8 +1,12 @@
 import { Request, Response, NextFunction } from 'express'
-import BaseError from '../util/errors/BaseError'
+import BaseError from '@util/errors/BaseError'
 
-
-export default function (err: BaseError, req: Request, res: Response, next: NextFunction) {
+export default function (
+    err: BaseError,
+    req: Request,
+    res: Response,
+    next: NextFunction
+) {
     if (err) {
         console.error(err.stack)
         const code = err.code

@@ -37,5 +37,4 @@ FROM base as development
 WORKDIR /opt/architecture
 ENV DEBUG_PORT=9320
 EXPOSE 9320
-RUN yarn install
-CMD yarn dev
+CMD yarn install && yarn dev
