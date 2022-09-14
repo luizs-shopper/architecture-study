@@ -8,6 +8,7 @@
     "start": "node dist/server/index.js",
     "dev": "tsnd -r tsconfig-paths/register --respawn --inspect=0.0.0.0:$DEBUG_PORT -- src/server/index.ts",
     "test": "jest",
+    "docker:test": "docker-compose run sidecar yarn test",
     "lint": "npx lint-staged",
     "cz": "cz",
     "prepare": "[ -d '.husky' ] && husky install || true"
