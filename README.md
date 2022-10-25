@@ -1,5 +1,7 @@
 # Estudo de arquitetura
 
+[![wakatime](https://wakatime.com/badge/user/39c2fee3-cb5d-4881-9643-2d279b5b87d1/project/a3ceef5a-4000-48ba-a32e-3743ed153121.svg?style=flat)](https://wakatime.com/badge/user/39c2fee3-cb5d-4881-9643-2d279b5b87d1/project/a3ceef5a-4000-48ba-a32e-3743ed153121)
+
 Estrutura:
 
 - **:file_folder: use-cases:** Contém os casos de uso do sistema, os casos de uso contém todas as regras de negócio e são independentes do mundo exterior
