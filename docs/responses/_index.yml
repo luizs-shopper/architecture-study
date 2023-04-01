@@ -1,0 +1,4 @@
+Error:
+  $ref: ./Error.yml
+BookPageResponse:
+  $ref: ./Error.yml

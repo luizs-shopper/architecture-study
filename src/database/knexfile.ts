@@ -1,13 +1,14 @@
+import { databaseConfig } from '@/config'
 import { Knex } from 'knex/types'
 export const study:Knex.Config = {
-    client: 'mysql2',
+    client: databaseConfig.databaseClient,
     connection: {
-        host: process.env.DB_HOST,
-        port: parseInt(process.env.DB_PORT || ''),
-        user: process.env.DB_USER,
-        password: process.env.DB_PASS,
-        database: process.env.DB_NAME,
-        connectTimeout: 60000
+        host: databaseConfig.databaseHost,
+        port: databaseConfig.databasePort,
+        user: databaseConfig.databaseUser,
+        password: databaseConfig.databasePassword,
+        database: databaseConfig.databaseName,
+        connectTimeout: databaseConfig.databaseConnectTimeout,
     },
     pool: {
         afterCreate: (conn: any, done: any) => {
@@ -15,8 +16,7 @@ export const study:Knex.Config = {
                 done(err, conn)
             })
         },
-        min: 2,
-        max: 10
-    }
-
+        min: databaseConfig.databaseMinPool,
+        max: databaseConfig.databaseMaxPool,
+    },
 }

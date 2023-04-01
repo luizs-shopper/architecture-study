@@ -1,0 +1,18 @@
+description: Erro na API
+content:
+  application/json:
+    schema:
+      type: object
+      properties:
+        code:
+          type: string
+          description: Código do erro
+          example: BAD_REQUEST
+        title:
+          type: string
+          description: Título do erro
+          example: Requisição inválida
+        message:
+          type: string
+          description: Mensagem do erro
+          example: Os parâmetros da requisição estão inválidos
